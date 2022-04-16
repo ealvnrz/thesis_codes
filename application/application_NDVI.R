@@ -89,7 +89,6 @@ fit1 <- GeoFit2(data=z,coordx=coords,corrmodel=corrmodel, model=model,
 #geovarest1<-GeoVarestbootstrap(fit1,K=250,optimizer="nlminb",lower=lower,upper=upper)
 GeoQQ(fit1)
 
-
 ##---------------------------------------------------------------
 ##                         Correlation                         --
 ##---------------------------------------------------------------
@@ -131,7 +130,6 @@ fit2 <- GeoFit(data=z,coordx=coords,corrmodel=corrmodel, model=model,
 
 #geovarest_2<-GeoVarestbootstrap(fit2,K=250,optimizer="nlminb",lower=lower,upper=upper)
 GeoQQ(fit2)
-
 
 ##---------------------------------------------------------------
 ##                         Correlation                         --
