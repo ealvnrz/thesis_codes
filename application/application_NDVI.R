@@ -7,7 +7,7 @@ require(rgdal)
 require(mapproj)
 library(mgcv)
 
-setwd("D:/Google Drive (ealvaradonarvaez@gmail.com)/Phd/Stats/Thesis/code/R/Application/app_final")
+#setwd("")
 
 set.seed(385736)
 

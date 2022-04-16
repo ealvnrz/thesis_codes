@@ -9,7 +9,7 @@ library(mgcv)
 
 set.seed(385736)
 
-setwd("D:/Google Drive (ealvaradonarvaez@gmail.com)/Phd/Stats/Thesis/code/R/Application/app_final")
+#setwd("")
 
 
 ##################################################################
