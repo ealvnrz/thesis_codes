@@ -7,9 +7,9 @@ require(rgdal)
 require(mapproj)
 library(mgcv)
 
-#setwd("")
-
 set.seed(385736)
+
+#setwd("")
 
 z=read.csv("data_z.csv")[,2]
 coords=read.csv("data_coords.csv")[,2:3]
