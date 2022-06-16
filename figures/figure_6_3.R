@@ -25,9 +25,7 @@ data1 <- GeoSim(coordx=coords, corrmodel=corrmodel, model="Beta",param=param,
 quilt.plot(coords,data1)
 hist(data1^(shape1/2), freq=FALSE, xlab="", main="")
 
-
 # Correlation function
-
 
 corr_beta2<-function(nu,alpha,rho){
   c=(nu+alpha)/2
@@ -69,7 +67,6 @@ corr_v=corr_beta2(nu,alpha,matern1)
 corr_v=c(1,corr_v)
 exp_rho=c(1,matern1)
 h=c(0,h)
-
 
 plot(h,corr_v, type = 'l', ylim = c(0,1),lty=1,lwd=2,xlab="",ylab="")
 lines(h,exp_rho, type = 'l', ylim = c(0,1),lty=2,lwd=2)

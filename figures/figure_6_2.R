@@ -7,21 +7,17 @@ library(fields)
 x <- seq(0,1,0.009)
 y <- seq(0,1,0.009)
 
-
 sparse=FALSE
 power2=1/6
-
-
 smooth=0
-
 set.seed(261)
+
 data1 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern", sparse=sparse, 
              model="Gaussian",
              copula="Clayton",
              param=list(power2=power2,smooth=smooth,nu=1,
              mean=0,sill=1,scale=0.15,nugget=0))$data
 image.plot(x,y,data1,col=terrain.colors(100),xlab="",ylab="")
-
 
 set.seed(261)
 data2 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern", 

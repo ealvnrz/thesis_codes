@@ -73,7 +73,7 @@ biv2beta_gauss=function(zi,zj,rho,nu){
   }
   return(RR*(dnorm(zi)*dnorm(zj)));
 }
-##############################################
+
 ##############################################
 
 biv2beta_vec <- Vectorize(biv2beta, c("zi","zj")) ## bivariate uniform
@@ -83,10 +83,9 @@ biv2beta_gauss_vec <- Vectorize(biv2beta_gauss, c("zi","zj")) #bivunif in scale 
 biv2gauss_vec <- Vectorize(biv2gauss, c("zi","zj")) #biv gaussiana
 ###########################
 
-
 xx=0.5;yy=1
 
-### testing simmetry
+### testing symmetry
 biv2gauss(xx,yy,0.7);biv2gauss(-xx,-yy,0.7);
 biv2gauss(xx,-yy,0.7);biv2gauss(-xx,yy,0.7);
 
@@ -101,9 +100,6 @@ biv2beta_gauss(xx,-yy,0.7,1);biv2beta_gauss(-xx,yy,0.7,1);
 #nu=5
 biv2beta_gauss(xx,yy,0.7,5);biv2beta_gauss(-xx,-yy,0.7,5);
 biv2beta_gauss(xx,-yy,0.7,5);biv2beta_gauss(-xx,yy,0.7,5);
-
-
-
 
 rho=0.9
 bbb=4
@@ -131,10 +127,7 @@ contour(ff,ff,BB2betagauss, add = TRUE,lwd=2,col="red",levels=seq(0.02,.4,0.04))
 #contour(ff,ff,BB2betagauss2, add = TRUE,lwd=2,col="green",levels=seq(0.02,.4,0.04))
 dev.off()
 
-
-
 #####################################################
-
 hh=seq(0.0001,0.99,0.001)
 corr=exp(-3*hh/0.4)
 NN=length(corr)
