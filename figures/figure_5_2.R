@@ -8,11 +8,11 @@ x <- seq(0,1,0.009)
 y <- seq(0,1,0.009)
 
 sparse=FALSE
-power2=1/6
+power2=5
 smooth=0
 set.seed(261)
 
-data1 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern", sparse=sparse, 
+data1 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend", sparse=sparse, 
              model="Gaussian",
              copula="Clayton",
              param=list(power2=power2,smooth=smooth,nu=1,
@@ -20,7 +20,7 @@ data1 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern", sparse=sparse,
 image.plot(x,y,data1,col=terrain.colors(100),xlab="",ylab="")
 
 set.seed(261)
-data2 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern", 
+data2 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend", 
              model="Gaussian",
              copula="Clayton",
                 param=list(power2=power2,smooth=smooth,nu=2,
@@ -28,7 +28,7 @@ data2 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern",
 image.plot(x,y,data2,col=terrain.colors(100),xlab="",ylab="") 
 
 set.seed(261)
-data5 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern", 
+data5 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend", 
              model="Gaussian",
              copula="Clayton",
               param=list(power2=power2,smooth=smooth,nu=5,
@@ -48,7 +48,7 @@ dev.off()
 
 smooth=1
 set.seed(261)
-data1 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern", sparse=sparse, 
+data1 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend", sparse=sparse, 
              model="Gaussian",
              copula="Clayton",
              param=list(power2=power2,smooth=smooth,nu=1,
@@ -57,7 +57,7 @@ image.plot(x,y,data1,col=terrain.colors(100),xlab="",ylab="")
 
 
 set.seed(261)
-data2 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern", 
+data2 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend", 
              model="Gaussian",
              copula="Clayton",
                 param=list(power2=power2,smooth=smooth,nu=2,
@@ -65,7 +65,7 @@ data2 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern",
 image.plot(x,y,data2,col=terrain.colors(100),xlab="",ylab="") 
 
 set.seed(261)
-data5 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend_Matern", 
+data5 <- GeoSimCopula(x,y,grid=TRUE, corrmodel="GenWend", 
              model="Gaussian",
              copula="Clayton",
               param=list(power2=power2,smooth=smooth,nu=5,
